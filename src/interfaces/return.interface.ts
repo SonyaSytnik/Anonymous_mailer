@@ -1,3 +1,6 @@
+/**
+ * Controller return interface
+ */
 export interface ReturnI {
   statusCode: number;
   result: 'Success' | 'Error';

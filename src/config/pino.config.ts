@@ -1,3 +1,6 @@
+/**
+ * Pino logger config
+ */
 export const pinoConfig = {
   prettyPrint: {
     colorize: true,

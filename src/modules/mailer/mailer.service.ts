@@ -10,6 +10,7 @@ import { EmailOptionsI } from '../email/interfaces/emailOptions.interface';
 class MailerService {
   /**
    * Sends email
+   * @param options 
    */
   async sendEmail(options: EmailOptionsI): Promise<Document<EmailI, {}>> {
     await emailService.send(options);
@@ -18,6 +19,7 @@ class MailerService {
 
   /**
    * Get email by id from db
+   * @param id 
    */
   async getEmail(id: string): Promise<Document<EmailI, {}>> {
     return await emailRepository.findEmailById(id);
@@ -25,6 +27,7 @@ class MailerService {
 
   /**
    * Delete email by id from db
+   * @param id 
    */
   async deleteEmail(id: string): Promise<string> {
     await emailRepository.deleteEmailById(id);

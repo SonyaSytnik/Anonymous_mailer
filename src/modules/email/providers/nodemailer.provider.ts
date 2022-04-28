@@ -6,6 +6,10 @@ import nodemailer from 'nodemailer';
  * Class for nodemailer provider
  */
 export class NodemailerProvider implements EmailProviderI {
+  /**
+   * Send email
+   * @param options 
+   */
   async send(options: EmailOptionsI): Promise<string> {
     const transport = nodemailer.createTransport({
       host: process.env.MAILER_HOST,

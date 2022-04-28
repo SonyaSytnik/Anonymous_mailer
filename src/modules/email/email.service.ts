@@ -21,13 +21,15 @@ class EmailService {
 
   /**
    * Change provider from default
+   * @param provider
    */
   set setProvider(provider: EmailProviderI) {
     this._provider = provider;
   }
 
   /**
-   * Sends email via provider
+   * Send email via provider
+   * @param options 
    */
   async send(options: EmailOptionsI): Promise<any> {
     return await this._provider.send(options);
