@@ -1,0 +1,57 @@
+{
+  "name": "anonymous-mailer",
+  "version": "1.0.0",
+  "description": "Service that allows you to send an email anonymously.",
+  "main": "main.ts",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "fastify": "^3.15.1",
+    "fastify-formbody": "^5.0.0",
+    "fastify-oas": "^3.0.8",
+    "fastify-swagger": "^5.2.0",
+    "jest": "^27.5.1",
+    "mongoose": "^5.12.7",
+    "nodemailer": "^6.6.1",
+    "pino": "^6.11.3",
+    "pino-pretty": "^4.7.1",
+    "swagger-ui-express": "^4.3.0",
+    "ts-jest": "^27.1.4",
+    "tsoa": "^3.14.1"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^15.0.2",
+    "@types/nodemailer": "^6.4.2",
+    "@types/pino": "^6.3.8",
+    "@types/swagger-ui-express": "^4.1.3",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "concurrently": "^7.1.0",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "scripts": {
+    "start": "ts-node --files ./src/main.ts",
+    "lint": "eslint",
+    "test": "jest",
+    "predev": "npm run swagger",
+    "prebuild": "npm run swagger",
+    "swagger": "tsoa spec"
+  },
+  "jest": {
+    "preset": "ts-jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neblizko/anonymous-mailer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neblizko/anonymous-mailer/issues"
+  },
+  "homepage": "https://github.com/neblizko/anonymous-mailer#readme"
+}
